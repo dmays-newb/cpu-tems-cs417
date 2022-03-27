@@ -4,32 +4,24 @@ main.py
 The core module of my example project
 """
 
-def about_me(your_name):
+import sys
+from input import (parse_raw_temps)
+
+
+def main():
     """
-    Return the most important thing about a person.
-    Parameters
-    ----------
-    your_name
-        A string indicating the name of the person.
+    This main function serves as the driver for the demo. Such functions
+    are not required in Python. However, we want to prevent unnecessary module
+    level (i.e., global) variables.
     """
-    return "The wise {} loves Python.".format(your_name)
+
+    input_temps = sys.argv[1]
+
+    with open(input_temps, 'r') as temps_file:
+        for temps_as_floats in parse_raw_temps(temps_file):
+            print(temps_as_floats)
 
 
-class ExampleClass:
-    """An example docstring for a class definition."""
+if __name__ == "__main__":
 
-    def __init__(self, name):
-        """
-        Blah blah blah.
-        Parameters
-        ---------
-        name
-            A string to assign to the `name` instance attribute.
-        """
-        self.name = name
-
-    def about_self(self):
-        """
-        Return information about an instance created from ExampleClass.
-        """
-        return "I am a very smart {} object.".format(self.name)
+    main()

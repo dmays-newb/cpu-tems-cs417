@@ -25,7 +25,7 @@
 - [X] Setup repo
 - [X] Setup Pydoc
 - [X] Setup module stubs
-- [ ] Accept file from command line arg
+- [X] Accept file from command line arg
 - [ ] Pre-process input file
 - [ ] Print out second-bounds in descending order
 - [ ] Print out yk in descending order
