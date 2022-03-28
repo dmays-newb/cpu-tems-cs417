@@ -26,6 +26,7 @@
 - [X] Setup Pydoc
 - [X] Setup module stubs
 - [X] Accept file from command line arg
+- [X] Rough-in output
 - [ ] Pre-process input file
 - [ ] Print out second-bounds in descending order
 - [ ] Print out yk in descending order

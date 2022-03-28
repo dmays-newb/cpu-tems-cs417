@@ -27,4 +27,7 @@ Modules
 .. automodule:: my_project.leastsquares
     :members:
 
+.. automodule:: my_project.output
+    :members:
+
 
