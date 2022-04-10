@@ -14,11 +14,21 @@
 - **One** file per core
 - Each line: xk<=x<xk+1; yi=c0+c1x ; type
 
-## Requirements and Constraints
-
-- 
-
 ## My Notes
+
+### How to Structure Data
+
+- For "Global" linear least squares approximation
+  - Consider using a np array of rows = number of sensor_readings
+  - Two columns per row: X (seconds) and Y (temp reading)
+    - Data type for each. Stick with float!
+  - Since it's linear... should I consider two X columns??
+    - `C0(1) + C1X` -> Meaning [[1, 0], [1, 30], ... [1, 30*row_count]]
+  - So... should I break up X and Y into seperate np.arrays?
+  
+**Whatever you do, make sure to test it with a smaller dataset 
+to confirm it's working correctly along the way**
+
 
 ### Tasks
 
@@ -27,11 +37,11 @@
 - [X] Setup module stubs
 - [X] Accept file from command line arg
 - [X] Rough-in output
-- [ ] Pre-process input file
-- [ ] Print out second-bounds in descending order
+- [X] Pre-process input file
+- [X] Print out second-bounds in descending order
 - [ ] Print out yk in descending order
-- [ ] Create approximation algorithm
-    - [ ] Test approx. algorithm with provided data
-- [ ] Finalize output
+- [x] Create least squares approximation algorithm
+    - [x] Test approx. algorithm with provided data
+- [ ] Finalize output: Get a pair (C0 and C1) and create a function string
 - [ ] Clean up code -> See Submission Guidelines
 - [ ] Turn in

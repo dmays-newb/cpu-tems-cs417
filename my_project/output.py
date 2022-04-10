@@ -4,9 +4,11 @@ output.py
 The module for creating output .txt files.
 """
 
-import sys
 
-def create_outfile(arr, core):
+def create_outfile(arr, core, algorithm):
+    """
+    INSERT DOC HERE
+    """
 
     file_name = "core_" + str(core) + ".txt"
     out = open(file_name, "w")
@@ -16,7 +18,7 @@ def create_outfile(arr, core):
         line = str(time_tracker*30) + "     <= x <     " +\
                str(time_tracker*30+30) + ";" +\
                "      y_" + str(time_tracker) + "     =     " +\
-               str(element) + ";   " + "algorithm"
+               str(element) + ";   " + algorithm
         out.write(line)
         time_tracker += 1
         out.write('\n')
