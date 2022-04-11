@@ -68,7 +68,7 @@ def least_squares_approx(matrices):
     """
     INSERT DOC HERE
     :param matrices:
-    :return: string of approximation function
+    :return: np.array of coeffiecients (1x2 matrix)
     """
 
     matrix_X = matrices.x_matrix
@@ -81,4 +81,10 @@ def least_squares_approx(matrices):
 
     solve_matrix(matrix_XTX, matrix_XTY)
     # print(matrix_XTY)
-    return matrix_XTY
+
+    temp = matrix_XTY[0]
+    matrix_XTY[0] = matrix_XTY[1]
+    matrix_XTY[1] = temp
+    formatted_matrix = np.zeros((1,2))
+    formatted_matrix[0] = matrix_XTY
+    return formatted_matrix
