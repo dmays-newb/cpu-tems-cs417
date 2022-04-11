@@ -7,8 +7,8 @@ The module for creating output .txt files.
 
 def create_function_string(coefs):
     """
-    INSERT DOC HERE
-    :param coefs:
+    Creates the string of a linear function (mx+b) using provided coefficients
+    :param coefs: tuple of coefficients
     :return: function string
     """
     coef1 = f"{coefs[0]:.4f}"
@@ -20,10 +20,10 @@ def create_function_string(coefs):
 
 def create_outfile(coef_list, core, algorithm):
     """
-    INSERT DOC HERE
-    :param arr:
-    :param core:
-    :param algorithm:
+    Prints time range, approximation function, and function type to a file.
+    :param coef_list: np.array of tuples with C0 and C1 values per element
+    :param core: integer indicator of which core is being calculated
+    :param algorithm: string of which algorithm is being used
     :return: VOID
     """
 

@@ -10,9 +10,12 @@ import numpy as np
 def backsolver(matrix_XTX, matrix_XTY):
     """
     Heavily borrowed by T.Kennedy @ "https://github.com/cstkennedy/Python-Workshop/wiki/Python-Workshop-3-NumPy"
-    :param matrix_XTX: 
-    :param matrix_XTY: 
-    :return: 
+    Supports solve_matrix function
+    Completes backsolving step of Gaussian Elimination
+    Modifieds matrix_XTY to contain the coefficients of the approximation function
+    :param matrix_XTX: np.array of Xtranspose*X
+    :param matrix_XTY: np.array of Xtranspose*Y
+    :return: VOID
     """
 
     num_rows, _ = matrix_XTX.shape
@@ -28,8 +31,10 @@ def backsolver(matrix_XTX, matrix_XTY):
 def solve_matrix(matrix_XTX, matrix_XTY):
     """
     Heavily borrowed by T.Kennedy @ "https://github.com/cstkennedy/Python-Workshop/wiki/Python-Workshop-3-NumPy"
-    :param matrix_XTX:
-    :param matrix_XTY:
+    Supporting function for least_squares_approx()
+    Performs pivot, scale, and eliminate steps of Gaussian Elimination
+    :param matrix_XTX: np.array of Xtranspose*X
+    :param matrix_XTY: np.array of Xtranspose*Y
     :return: np.array::float solution_vector
     """
 
@@ -66,8 +71,8 @@ def solve_matrix(matrix_XTX, matrix_XTY):
 
 def least_squares_approx(matrices):
     """
-    INSERT DOC HERE
-    :param matrices:
+    Coordinates least squares approximation.
+    :param matrices: matrices class object containing all temps and time intervals
     :return: np.array of coeffiecients (1x2 matrix)
     """
 

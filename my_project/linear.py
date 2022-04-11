@@ -1,7 +1,7 @@
 """
 linear.py
 ====================================
-Module for piecewise linear interpolation
+Module for piecewise linear interpolation.
 """
 
 import numpy as np
@@ -9,8 +9,8 @@ import numpy as np
 
 def interpolate_list(matrices):
     """
-    INSERT DOC HERE
-    :param matrices:
+    Creates list of interpolation functions for given matrices
+    :param matrices: matrices class object containing all temps and time intervals
     :return: numpy array of 2 coefficients (tuples); shape: (num_input_rows - 1) x 2
     """
 
